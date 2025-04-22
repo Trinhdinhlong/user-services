@@ -12,6 +12,7 @@ import java.util.Optional;
 import com.example.user_service.request.LoginRequest;
 @RestController
 @RequestMapping("/api/users")
+@CrossOrigin("*")
 public class UserController {
     @Autowired
     private UserService userService;
