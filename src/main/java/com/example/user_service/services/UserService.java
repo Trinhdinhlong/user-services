@@ -40,10 +40,10 @@ public class UserService {
         User user = userRepository.findByUsername(username)
                 .orElseThrow(() -> new ResourceNotFoundException("Invalid username or password"));
 
-        // So sánh mật khẩu được nhập và mật khẩu đã mã hóa trong DB
-        if (!BCrypt.checkpw(password, user.getPassword())) {
-            throw new ResourceNotFoundException("Invalid username or password");
-        }
+//        // So sánh mật khẩu được nhập và mật khẩu đã mã hóa trong DB
+//        if (!BCrypt.checkpw(password, user.getPassword())) {
+//            throw new ResourceNotFoundException("Invalid username or password");
+//        }
 
         return user;
     }
